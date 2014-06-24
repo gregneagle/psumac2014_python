@@ -8,8 +8,7 @@ import subprocess
 
 def main():
     cmd = ['/usr/sbin/system_profiler', 'SPHardwareDataType', '-xml']
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    (output, error) = proc.communicate()
+    output = subprocess.check_output(cmd)
 
     info = plistlib.readPlistFromString(output)
 

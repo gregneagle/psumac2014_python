@@ -12,4 +12,3 @@ plist_data = NSData.dataWithContentsOfFile_(filename)
 
 print dataObject
 
-
